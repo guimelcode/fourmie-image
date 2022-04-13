@@ -1,0 +1,119 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import './variables';
+
+.wp-block-fourmi-e-image {
+	margin: 0 0 20px 0;
+	margin: 0 0 0 0;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	align-self: flex-start;
+	height: auto;
+	width: 100%;
+	max-width: 100%;
+
+	&.no-margin {
+		margin: 0 0 -20px 0;
+
+
+		img {
+			margin: -20px -40px 0 -20px;
+
+
+			@media (min-width: map-get($breakpoints, md)) {
+				margin: -20px -40px 0 -20px;
+			}
+		}
+	}
+
+	&.width-limit {
+		max-width: 55vw;
+
+	}
+
+	// width: max-content;
+	img.cover {
+		object-fit: cover;
+
+		// width: auto;
+		&.hauteur {
+			&-petite {
+				height: 150px;
+				height: 180px;
+
+				@media (min-width: map-get($breakpoints, md)) {
+					height: 200px;
+					height: 210px;
+				}
+
+				@media (min-width: map-get($breakpoints, xl)) {
+					height: 250px;
+					height: 240px;
+				}
+			}
+
+			&-moyenne {
+				height: 350px;
+				height: 340px;
+
+				@media (min-width: map-get($breakpoints, md)) {
+					height: 400px;
+					height: 380px;
+				}
+
+				@media (min-width: map-get($breakpoints, xl)) {
+					height: 450px;
+					height: 420px;
+				}
+
+			}
+
+			&-grande {
+				height: 550px;
+				height: 480px;
+
+				@media (min-width: map-get($breakpoints, md)) {
+					height: 600px;
+					height: 500px;
+				}
+
+				@media (min-width: map-get($breakpoints, xl)) {
+					height: 650px;
+					height: 600px;
+				}
+			}
+		}
+
+	}
+
+	img {
+		display: block;
+		width: auto;
+		width: 100%;
+		height: auto;
+		max-height: 100%;
+		max-width: 100%;
+
+		margin: 0 -40px 0 -20px;
+
+		@media (min-width: map-get($breakpoints, md)) {
+			margin: 0 0 0 -20px;
+		}
+
+
+	}
+
+	figcaption {
+		margin-right: 20px;
+		margin-bottom: 20px;
+		font-size: $fontSize * map-get($typoMod, texte-1) * 1px;
+		line-height: $inter-lineHeightComputed * map-get($typoMod, texte-1) * 1px;
+		font-weight: 400;
+	}
+}

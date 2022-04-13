@@ -1,0 +1,69 @@
+{
+	"apiVersion": 2,
+	"name": "fourmi-e/image",
+	"version": "0.1.0",
+	"title": "Fourmie Image",
+	"category": "design",
+	"icon": "smiley",
+	"description": "Block image pour le thème fourmi-e",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "fourmie-image",
+	"parent": ["fourmi-e/conteneur", "fourmi-e/galerie"],
+	"attributes": {
+		"imgHeightLimit": {
+			"type": "string",
+			"default": "moyenne"
+		},
+		"imgAjust": {
+			"type": "boolean",
+			"default": false
+		},
+		"imgMargin": {
+			"type":"boolean",
+			"default": true
+		},
+		"imgOffsetVerticalPosition": {
+			"type": "number",
+			"default": 50
+		},
+		"maxWidthLimit": {
+			"type": "boolean",
+			"default":false
+		},
+		"imgID": {
+			"type": "number",
+			"default": null
+		},
+		"imgURL": {
+			"type": "string",
+			"source": "attribute",
+			"attribute": "src",
+			"selector": "img"
+		},
+		"imgAlt": {
+			"type": "string",
+			"source": "attribute",
+			"attribute": "alt",
+			"selector": "img"
+		},
+		"imgWidth": {
+			"type": "number",
+			"default": null
+		},
+		"imgHeight": {
+			"type": "number",
+			"default": null
+		},
+		"figcaptionContent": {
+			"type": "string",
+			"source": "html",
+			"selector": "figcaption",
+			"default": ""
+		}
+	},
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
